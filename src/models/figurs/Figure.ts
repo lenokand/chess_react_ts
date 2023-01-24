@@ -31,10 +31,10 @@ export class Figure{
         this.id = Math.random();
     }
 
-    canMove(target:Cell): boolean{
-        return: true;
+    canMove(target: Cell) : boolean{
+        return true;
     }
-    moveFigure(target:Cell){
+    moveFigure(target: Cell){
         
     }
 }
