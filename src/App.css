@@ -52,3 +52,15 @@ background-color: blanchedalmond;
   border-radius: 50%;
   background-color: rgb(99, 235, 99);
 }
+
+.lost{
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background-color: lightcyan;
+}
+
+.lost_img{
+  width: 20px;
+  height: 20px;
+}
