@@ -24,7 +24,7 @@ const App = () => {
     const newBoard = new Board();
     newBoard.initCells()
     newBoard.addFigures()
-    setCurrentPlayer(whitePlayer);
+    setCurrentPlayer(whitePlayer);  
     setBoard(newBoard)
   }
   
@@ -50,11 +50,14 @@ const App = () => {
   />
 
   <LostFigures 
-  title="Черные фигуры"
-   figures={board.lostBlackFigures}/>
+  title="Black figures"
+   figures={board.lostBlackFigures}
+   playerColor = "white"
+   />
   <LostFigures 
-  title="Белые фигуры"
-   figures={board.lostWhiteFigures}/>
+  title="White figures"
+   figures={board.lostWhiteFigures}
+   playerColor="black"/>
 </div>
 
   )
