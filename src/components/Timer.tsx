@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Player } from '../models/Player';
 import { Colors } from '../models/Colors';
+import Clock from './Clock';
 interface TimerProps{
     currentPlayer: Player | null;
     restart: () => void;
@@ -71,7 +72,10 @@ const handleRestart=() =>{
 }
 
     return (
-        <div>
+        <div className='timer'>
+
+<Clock/>
+
             <div>
                 <button className='restart' onClick={handleRestart}>Restart game    </button>
                 

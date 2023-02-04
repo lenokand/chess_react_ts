@@ -12,7 +12,11 @@
   align-items: center;
   position: relative;
 }
-
+.timer{
+  align-self: stretch;
+  justify-content: space-between;
+  padding-top: 50px;
+}
 
 .board{
   width: calc(64px * 8);
@@ -193,4 +197,65 @@ margin-left: 15px;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+/* Clock */
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  margin-bottom: 150px;
+}
+
+.clock-face {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  border: rgba(0, 0, 0, 0.432) solid 1px;
+}
+
+.clock-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  /* opacity: 0; */
+}
+
+.clock-hand {
+  position: absolute;
+  top: 47px;
+  /* left: 3px; */
+  /* top: 50%; */
+  left: 50%;
+  /* transform-origin: 100% 50%; */
+  width: 2px;
+  height: 60px;
+
+  background-color: black;
+}
+
+.clock-hand-seconds {
+  transform: rotate(90deg);
+  /* height: 70px; */
+  
+}
+
+.clock-hand-minutes {
+  transform: rotate(90deg);
+  /* height: 50px; */
+  width: 3px;
+}
+
+.clock-hand-hours {
+  transform: rotate(90deg);
+  /* height: 30px; */
+  width: 4px;
 }
