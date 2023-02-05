@@ -94,8 +94,14 @@ export class Cell{
     moveFigure(
         target: Cell
     ){
-         if(this.figure && this.figure?.canMove(target)){
+         if(this.figure && this.figure?.canMove(target)
+            && target.figure?.name != "король"){
             this.figure.moveFigure(target)
+
+            // if(target.figure?.name == "король"){
+            //     console.log(target.figure?.name)
+            // }
+            
             // target.figure = this.figure;
 
             // подсчет съеденых фигур
@@ -105,6 +111,12 @@ export class Cell{
 
             target.setFigure(this.figure);
             this.figure = null;
+         }
+         else{
+            if(this.figure && this.figure?.canMove(target)
+                && target.figure?.name == "король"){
+                    console.log("shach")
+                }
          }
     }
 } 

@@ -29,7 +29,7 @@ startTimer( )
     }
     function decrementBlackTimer(){
         // setBlackTime(blackTime - 1)
-        console.log(blackTime)
+        // console.log(blackTime)
         // setBlackTime(prev => (prev >= 1) ? prev - 1 : 0 )
         setBlackTime(function(prev){
 

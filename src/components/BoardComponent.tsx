@@ -17,14 +17,20 @@ const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 function click(cell: Cell){
     if(selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)){
         selectedCell.moveFigure(cell);
+
         swapPlayer();
         setSelectedCell(null);
         updateBoard()
+        
+        // if(cell.figure?.name=="король"){
+        //     console.log("king under attack")
+        // }
+
+        // console.log(cell.figure?.name)
     } else {
         if (cell.figure?.color === currentPlayer?.color) {
             setSelectedCell(cell);
         }
-        
         
     }
 
@@ -46,8 +52,6 @@ function updateBoard() {
     const  newBoard = board.getCopyBoard()
     setBoard(newBoard)
 }
-
-
     return (
 
 <div>
